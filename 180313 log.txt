@@ -1,7 +1,43 @@
 180313 log
 Arduino IDE downloaded
 Select Board -> Arduino Mega 2560
-Downloaded Marlin/configuration.h from the Hypercube website
+Downloaded Marlin/configuration.h from Thingiverse->Hypercube
   They claim that they are for version 1.1-RC8 and above also 1.1.4. I set git
-  repo back to 1.1.4 and now need to copy the configuration file with sensor.
+  repo back to 1.1.4 and copied the configuration file with sensor.
 Open Marlin/Configuration.h
+  Note: MOTHERBOARD is 1.4 EFB, extruder fan bed, these are the pins D8-D10
+  Check temperature sensors. I think the TEMP_SENSOR_0 is OK. Also, I checked TEMP_SENSOR_BED with the dx.com specification: 3950.
+  maybe HEATER_0_MAXTEMP ... HEATER_4_MAXTEMP and BED_MAXTEMP should be lowered according to http://solidutopia.com/marlin-firmware-user-guide-basic/
+  Disabled PIDTEMPBED (enabled by Thingiverse) since bed is not as precise
+  PIDTEMP for the hotend is on by default, let's keep it that way.
+  todo check ENDSTOPPULLUPS
+  todo check if need invert X_MIN_ENDSTOP_INVERTING etc.
+  todo check if ENDSTOP_INTERRUPTS_FEATURE really works
+  todo DEFAULT_AXIS_STEPS_PER_UNIT was decreased, is it ok?
+  todo DEFAULT_MAX_ACCELERATION was decreased, is it ok?
+  todo the following were changed
+    DEFAULT_ACCELERATION 3000 -> 1500
+    DEFAULT_RETRACT_ACCELERATION 3000 -> 10000 -svg> 3000
+    DEFAULT_TRAVEL_ACCELERATION 3000 -> 2000
+  todo check ok
+    DEFAULT_XJERK 20 -> 10
+    DEFAULT_YJERK 20 -> 10
+  todo FIX_MOUNTED_PROBE was enabled, what does it do?
+  todo check ok
+    X_PROBE_OFFSET_FROM_EXTRUDER
+    Y_PROBE_OFFSET_FROM_EXTRUDER
+  todo probe double touch was enabled
+  todo Z_CLEARANCE_DEPLOY_PROBE was set to 0 from 10, why???
+  todo check INVERT_Y_DIR
+  todo MIN_SOFTWARE_ENDSTOPS was commented, I uncommented it again
+  checked with Thijs
+    // Preheat Constants
+    #define PREHEAT_1_TEMP_HOTEND 180
+    #define PREHEAT_1_TEMP_BED     60
+    #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
+
+    #define PREHEAT_2_TEMP_HOTEND 235
+    #define PREHEAT_2_TEMP_BED     60
+    #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
+  SDSUPPORT disabled because it is not there
+  Reprap PID smart controller disabled because it is not there

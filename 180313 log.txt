@@ -1,0 +1,7 @@
+180313 log
+Arduino IDE downloaded
+Select Board -> Arduino Mega 2560
+Downloaded Marlin/configuration.h from the Hypercube website
+  They claim that they are for version 1.1-RC8 and above also 1.1.4. I set git
+  repo back to 1.1.4 and now need to copy the configuration file with sensor.
+Open Marlin/Configuration.h

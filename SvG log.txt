@@ -44,7 +44,7 @@ Open Marlin/Configuration.h
 Open Marlin.ino
   Verify, takes few mins.
 
-Todo
+180328
 Watched video https://www.youtube.com/watch?v=dZRI7OP14lo&list=PLIaArjwViQRVAERWRrYfe9rtiwvvRGCzw&index=14
   Plug in temperature sensors
   Plug in USB cable
@@ -73,3 +73,4 @@ Watched video https://www.youtube.com/watch?v=dZRI7OP14lo&list=PLIaArjwViQRVAERW
 		s<flag> do not get???
 Press reset on the board to stop all motor movement
 Needed to add 5mm to the y axis endstop to prevent hitting the screw
+todo automatic bed leveling http://marlinfw.org/docs/features/auto_bed_leveling.html

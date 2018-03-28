@@ -73,4 +73,12 @@ Watched video https://www.youtube.com/watch?v=dZRI7OP14lo&list=PLIaArjwViQRVAERW
 		s<flag> do not get???
 Press reset on the board to stop all motor movement
 Needed to add 5mm to the y axis endstop to prevent hitting the screw
-todo automatic bed leveling http://marlinfw.org/docs/features/auto_bed_leveling.html
+Automatic bed leveling http://marlinfw.org/docs/features/auto_bed_leveling.html
+	Enabled DEBUG_LEVELING_FEATURE
+	LEFT_PROBE_BED_POSITION should be increased from 15 to 30 since the initial value can't be reached
+	Use M111 S32 to turn on detailed logging of homing and bed leveling or M111 S247 for maximum logging
+	G28 for homing
+	G29 for beginning automatic bed leveling
+		Stay close to reset switch in case something goes wrong.
+	todo probe position can be set 10 cm further if wasknijpers not in the way
+	todo continue

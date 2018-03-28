@@ -1,0 +1,20 @@
+From left top clockwise
+D10 Hotend
+D09 Fan
+D08 Hot plate
+Ext0 Extruder
+Ext1 empty
+Endstops
+					   -
+	sigx - sigy - sigz -
+	gndx - gndy - gndz -
+	v+x  - v+y  - v+z  -
+Thermistors
+	extruder therm x2, hotplate therm x2, empty x2
+Z
+Y
+X
+
+Motor order
+Hold motor and look at the connector. Label from left to right: 1 2 3 4. Hold the board as above. The order should be identical.
+	The Z axis is different but works -> OK

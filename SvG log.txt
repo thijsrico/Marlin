@@ -67,3 +67,5 @@ Watched video https://www.youtube.com/watch?v=dZRI7OP14lo&list=PLIaArjwViQRVAERW
   m106 to enable part cooling fan
   m107 to disable the part cooling fan
   m140 set bed target temperature
+	Doesn't do anything
+Needed to add 5mm to the y axis endstop to prevent hitting the screw

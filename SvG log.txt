@@ -49,13 +49,21 @@ Watched video https://www.youtube.com/watch?v=dZRI7OP14lo&list=PLIaArjwViQRVAERW
   Plug in temperature sensors
   Plug in USB cable
   Open Pronterface
+	COM7 (or whatever) and baud 250000
   Test the temperature sensors
-  Plug in endstops
+	Bed label was correct but connection was poor, redone
+  Plug in endstops x3
+	1mm over bij endstop
   m119 to test the endstops
   Insert x axis
   Insert power
   g91 to move only relatively
-  g1 x10 y10 to move diagonally
-    ??? does pronterface know that we are going diagonakky?
+  g1 x10 to move diagonally
+    ??? does pronterface know that we are going diagonally
+  g1 e10 testing the extruder
+	m302 give cold extrusion status
+	m302 p1 disable cold extrusion checking
+	m302 p0 enable cold extrusion checking
   m106 to enable part cooling fan
   m107 to disable the part cooling fan
+  m140 set bed target temperature

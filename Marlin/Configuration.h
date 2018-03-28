@@ -762,9 +762,9 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 200
-#define Y_MAX_POS 200
-#define Z_MAX_POS 155
+#define X_MAX_POS 200 // verified 200 +- 1 mm
+#define Y_MAX_POS 195 // verified 195 +- 1 mm
+#define Z_MAX_POS 175 // needs more checking, might be a bit bigger
 
 // If enabled, axes won't move below MIN_POS in response to movement commands.
 #define MIN_SOFTWARE_ENDSTOPS

@@ -10,8 +10,8 @@ Open Marlin/Configuration.h
   maybe HEATER_0_MAXTEMP ... HEATER_4_MAXTEMP and BED_MAXTEMP should be lowered according to http://solidutopia.com/marlin-firmware-user-guide-basic/
   Disabled PIDTEMPBED (enabled by Thingiverse) since bed is not as precise
   PIDTEMP for the hotend is on by default, let's keep it that way.
-  todo check ENDSTOPPULLUPS
-  todo check if need invert X_MIN_ENDSTOP_INVERTING etc.
+  Check ENDSTOPPULLUPS
+  Check if need invert X_MIN_ENDSTOP_INVERTING etc.
   todo check if ENDSTOP_INTERRUPTS_FEATURE really works
   todo DEFAULT_AXIS_STEPS_PER_UNIT was decreased, is it ok?
   todo DEFAULT_MAX_ACCELERATION was decreased, is it ok?
@@ -26,9 +26,9 @@ Open Marlin/Configuration.h
   todo check ok
     X_PROBE_OFFSET_FROM_EXTRUDER
     Y_PROBE_OFFSET_FROM_EXTRUDER
-  todo probe double touch was enabled
+  Probe double touch is enabled and works
   todo Z_CLEARANCE_DEPLOY_PROBE was set to 0 from 10, why???
-  todo check INVERT_Y_DIR
+  Check INVERT_Y_DIR is ok
   todo MIN_SOFTWARE_ENDSTOPS was commented, I uncommented it again
   checked with Thijs
     // Preheat Constants
@@ -67,4 +67,9 @@ Watched video https://www.youtube.com/watch?v=dZRI7OP14lo&list=PLIaArjwViQRVAERW
   m106 to enable part cooling fan
   m107 to disable the part cooling fan
   m140 S40 set bed target temperature to for example 40 degrees
+  Configure software endstops for maximum
+	Home all axes in pronterface
+	m211 s<flag> for software endstops state
+		s<flag> do not get???
+Press reset on the board to stop all motor movement
 Needed to add 5mm to the y axis endstop to prevent hitting the screw

@@ -41,3 +41,21 @@ Open Marlin/Configuration.h
     #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
   SDSUPPORT disabled because it is not there
   Reprap PID smart controller disabled because it is not there
+Open Marlin.ino
+  Verify, takes few mins.
+
+Todo
+Watched video https://www.youtube.com/watch?v=dZRI7OP14lo&list=PLIaArjwViQRVAERWRrYfe9rtiwvvRGCzw&index=14
+  Plug in temperature sensors
+  Plug in USB cable
+  Open Pronterface
+  Test the temperature sensors
+  Plug in endstops
+  m119 to test the endstops
+  Insert x axis
+  Insert power
+  g91 to move only relatively
+  g1 x10 y10 to move diagonally
+    ??? does pronterface know that we are going diagonakky?
+  m106 to enable part cooling fan
+  m107 to disable the part cooling fan

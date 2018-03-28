@@ -470,7 +470,7 @@
   //#define ENDSTOPPULLUP_ZMAX
   #define ENDSTOPPULLUP_XMIN
   #define ENDSTOPPULLUP_YMIN
-  #define ENDSTOPPULLUP_ZMIN
+  //#define ENDSTOPPULLUP_ZMIN // comment out for probe. Enable for button
   //#define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
 
@@ -512,7 +512,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 100 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 100 } // x move in microsteps, y move in microsteps, z move in microsteps, extruder move in microsteps. Values might need calibration.
 
 /**
  * Default Max Feed Rate (mm/s)

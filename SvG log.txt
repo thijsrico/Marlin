@@ -92,3 +92,19 @@ Automatic bed leveling http://marlinfw.org/docs/features/auto_bed_leveling.html
 	M501 to retrieve from EEPROM (done automatically on boot)
 	Enable MIN_SOFTWARE_ENDSTOPS again
 	todo probe position can be set 10 cm further if wasknijpers not in the way
+
+180424
+First cube prints well
+After printing got error:
+	Exception in thread Thread-24:
+	Traceback (most recent call last):
+	  File "threading.pyc", line 801, in __bootstrap_inner
+	  File "threading.pyc", line 754, in run
+	  File "printrun\pronterface.pyc", line 1050, in statuschecker
+	  File "printrun\pronsole.pyc", line 873, in statuschecker
+	  File "printrun\pronterface.pyc", line 1011, in statuschecker_inner
+	  File "printrun\pronsole.pyc", line 1319, in get_eta
+	  File "printrun\utils.pyc", line 175, in __call__
+	  File "printrun\gcoder.pyc", line 724, in idxs
+	IndexError: array index out of range
+And the bed and the extruder temp were not updated. ???

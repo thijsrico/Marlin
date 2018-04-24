@@ -75,10 +75,20 @@ Press reset on the board to stop all motor movement
 Needed to add 5mm to the y axis endstop to prevent hitting the screw
 Automatic bed leveling http://marlinfw.org/docs/features/auto_bed_leveling.html
 	Enabled DEBUG_LEVELING_FEATURE
-	LEFT_PROBE_BED_POSITION should be increased from 15 to 30 since the initial value can't be reached
-	Use M111 S32 to turn on detailed logging of homing and bed leveling or M111 S247 for maximum logging
+	Disable MIN_SOFTWARE_ENDSTOPS for now
+	LEFT_PROBE_BED_POSITION had to be increased from 15 to 30 since the initial value can't be reached
+	(Use M111 S32 to turn on detailed logging of homing and bed leveling or M111 S247 for maximum logging)
 	G28 for homing
 	G29 for beginning automatic bed leveling
 		Stay close to reset switch in case something goes wrong.
+	Move printer to center
+		g1 x100 y100 z0
+			Sometimes this is VERY slow???
+	Adjust Z-axis manually
+	M114 to get the offset
+		See Z-offset and enter this value into Z_OFFSET_FROM_EXTRUDER
+	M500 to save the bed leveling data to EEPROM
+	M502 to reset the bed leveling data
+	M501 to retrieve from EEPROM (done automatically on boot)
+	Enable MIN_SOFTWARE_ENDSTOPS again
 	todo probe position can be set 10 cm further if wasknijpers not in the way
-	todo continue

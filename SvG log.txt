@@ -111,3 +111,39 @@ After printing got error:
     Options if problem persists:
       Pronterface binary with version 16.0 is old (2015). Maybe get the newest version of Pronterface from http://kliment.kapsi.fi/printrun/
       Or download source and run with Python
+PID autotuning
+	m303 s190 for the extruder
+		SENDING:M303 S190
+		 bias: 49 d: 49 min: 188.64 max: 198.42
+		 bias: 49 d: 49 min: 188.18 max: 191.58
+		 bias: 47 d: 47 min: 188.64 max: 191.58 Ku: 40.67 Tu: 17.53
+		 Classic PID
+		 Kp: 24.40 Ki: 2.78 Kd: 53.48
+		 bias: 47 d: 47 min: 188.64 max: 191.58 Ku: 40.67 Tu: 17.37
+		 Classic PID
+		 Kp: 24.40 Ki: 2.81 Kd: 52.98
+		 bias: 46 d: 46 min: 188.64 max: 191.58 Ku: 39.81 Tu: 16.87
+		 Classic PID
+		 Kp: 23.88 Ki: 2.83 Kd: 50.38
+		PID Autotune finished! Put the last Kp, Ki and Kd constants from below into Configuration.h
+		#define  DEFAULT_Kp 23.88
+		#define  DEFAULT_Ki 2.83
+		#define  DEFAULT_Kd 50.38
+		PID Autotune start
+		 bias: 46 d: 46 min: 188.98 max: 198.91
+		 bias: 46 d: 46 min: 188.18 max: 191.58
+		 bias: 45 d: 45 min: 188.64 max: 191.58 Ku: 38.94 Tu: 17.04
+		 Classic PID
+		 Kp: 23.37 Ki: 2.74 Kd: 49.77
+		 bias: 44 d: 44 min: 188.64 max: 191.58 Ku: 38.08 Tu: 17.70
+		 Classic PID
+		 Kp: 22.85 Ki: 2.58 Kd: 50.53
+		 bias: 44 d: 44 min: 188.64 max: 191.58 Ku: 38.08 Tu: 17.37
+		 Classic PID
+		 Kp: 22.85 Ki: 2.63 Kd: 49.60
+		PID Autotune finished! Put the last Kp, Ki and Kd constants from below into Configuration.h
+		#define  DEFAULT_Kp 22.85
+		#define  DEFAULT_Ki 2.63
+		#define  DEFAULT_Kd 49.60
+	m303 e-1 s50 for the heated bed
+		PID Autotune failed! Bad extruder nummber ???
